@@ -1,1 +1,1 @@
-java -cp contrib/jar/*:build/3dm-0.1.5beta1.jar tdm.tool.TreeDiffMerge $@
+java -cp contrib/jar/*:build/3dm.jar tdm.tool.TreeDiffMerge $@
