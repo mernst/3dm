@@ -12,6 +12,7 @@ long story: This project is based on a contrib subproject (a pseudo-maven depend
 
     $ ant contrib-get
     $ ant 
+    $ ant 3dm.jar
     $ ant test
     $ ant release
 
