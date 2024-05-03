@@ -125,7 +125,7 @@ public class Diff extends DiffAlgorithm {
       queue.add(root);
       while( !queue.isEmpty() ) {
         Node n = (Node) queue.removeFirst();
-        nodeToNumber.put(n,new Long(id));
+        nodeToNumber.put(n,id);
         numberToNode.put(String.valueOf(id),n);
         for( int i=0;i<n.getChildCount();i++)
           queue.add(n.getChildAsNode(i));

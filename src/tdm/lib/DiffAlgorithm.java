@@ -98,13 +98,13 @@ public abstract class DiffAlgorithm {
           // in separate tags
           if (!s.isEmpty()) {
             DiffOperation op = new DiffOperation(DiffOperation.COPY, s.src,
-                                                 s.dst, new Long(s.run));
+                                                 s.dst, s.run);
             content(op, true);
             content(op, false);
           }
           if (childStopNodes.size() > 0 || lastStopNode) {
             DiffOperation op = new DiffOperation(DiffOperation.COPY, src,
-                                                 dst, new Long(1l));
+                                                 dst, 1L);
             content(op, true);
             copy(childStopNodes);
             content(op, false);
@@ -114,7 +114,7 @@ public abstract class DiffAlgorithm {
         } else { // appends to open sequence (other reason for seq. break)
           s.append(src);
           DiffOperation op = new DiffOperation(DiffOperation.COPY, s.src, s.dst,
-                                               new Long(s.run));
+                                               s.run);
           content(op, true);
           copy(childStopNodes);
           content(op, false);
@@ -124,7 +124,7 @@ public abstract class DiffAlgorithm {
       } else { // endif has base match
         if (!s.isEmpty()) {
           DiffOperation op = new DiffOperation(DiffOperation.COPY, s.src, s.dst,
-                                               new Long(s.run));
+                                               s.run);
           content(op, true);
           content(op, false);
           s.setEmpty();
@@ -187,7 +187,7 @@ public abstract class DiffAlgorithm {
     public static final int ROOT_INSERT = 2;
     public static final int COPY = 3;
     public static final int INSERT = 4;
-    public static final Long NO_VALUE = new Long(Long.MIN_VALUE); // If a field has no value
+    public static final Long NO_VALUE = Long.MIN_VALUE; // If a field has no value
 
     private int operation;
     private Object source;

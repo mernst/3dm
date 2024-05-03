@@ -40,7 +40,9 @@ ant contrib-ok
   <target name="compile" depends="init"
         description="compile the source " >
     <javac srcdir="${src}" destdir="${build}"
-     includes="tdm/**" excludes="tdm/guitool/**" >
+	   includes="tdm/**" excludes="tdm/guitool/**"
+	   includeantruntime="false"
+	   >
     <classpath>
       <path refid="libpath" />
     </classpath>
@@ -50,7 +52,9 @@ ant contrib-ok
   <target name="compile-lib" depends="init"
         description="compile the lib source " >
     <javac srcdir="${src}" destdir="${build}"
-     includes="tdm/lib/**" >
+	   includes="tdm/lib/**"
+	   includeantruntime="false"
+	   >
     <classpath>
       <path refid="libpath" />
     </classpath>
@@ -60,7 +64,9 @@ ant contrib-ok
   <target name="compile-tool" depends="init"
         description="compile the tool source " >
     <javac srcdir="${src}" destdir="${build}"
-	    includes="tdm/tool/**">
+	   includes="tdm/tool/**"
+	   includeantruntime="false"
+	   >
     <classpath>
       <path refid="libpath" />
       <pathelement path="${build}" /> 

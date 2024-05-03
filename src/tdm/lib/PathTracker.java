@@ -51,7 +51,7 @@ public class PathTracker {
 
   /** Start new subtree */
   public void enterSubtree() {
-    path.addLast(new Integer(childPos));
+    path.addLast(childPos);
     childPos = 0;
   }
 
@@ -109,7 +109,7 @@ public class PathTracker {
   private static LinkedList makePath( Node n ) {
     LinkedList path = new LinkedList();
     do {
-      path.addLast(new Integer(n.getChildPos()));
+      path.addLast(n.getChildPos());
     } while( (n = n.getParentAsNode()) != null);
 ///    path.removeLast(); // We don't want the artificial root node in the path
     Collections.reverse(path);

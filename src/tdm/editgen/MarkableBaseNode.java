@@ -46,7 +46,7 @@ public class MarkableBaseNode extends BaseNode {
 
   public void mark(int mark) {
     if( markLog != null )
-      markLog.put(this,new Integer(markCount));
+      markLog.put(this,markCount);
     markCount|=mark;
   }
 

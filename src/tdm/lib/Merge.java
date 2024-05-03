@@ -386,7 +386,7 @@ public class Merge implements XMLNode.Merger {
       } else {
         // Found in base, check for moves
         ml.add( current );
-        baseMatches.put( match, new Integer( ml.tailPos ) );
+        baseMatches.put( match, ml.tailPos );
         childPos = match.getChildPos();
         childPos = childPos == -1 ? -2 : childPos; // Remember; not found = -2
         if( (prevChildPos + 1) != childPos ) {
@@ -978,7 +978,7 @@ public class Merge implements XMLNode.Merger {
       if( list.elementAt(tailPos) != null )
         n.locked = ((MergeEntry) list.elementAt(tailPos)).locked;
       list.setElementAt(n,tailPos);
-      index.put( n.node.getBaseMatch(), new Integer(tailPos));
+      index.put( n.node.getBaseMatch(), tailPos);
       currentEntry = n;
     }
 
@@ -1011,7 +1011,7 @@ public class Merge implements XMLNode.Merger {
       tailPos--;
       index.clear();
       for( int i=0;i<getEntryCount();i++)
-        index.put( getEntry(i).node.getBaseMatch(), new Integer(i));
+        index.put( getEntry(i).node.getBaseMatch(), i);
     }
 
     public void lockNeighborhood(  int left, int right ) {

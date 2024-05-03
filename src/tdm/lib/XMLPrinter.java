@@ -149,7 +149,7 @@ public class XMLPrinter extends DefaultHandler {
       pw.print(s);
    }
 
-   final Integer HAS_CONTENT = new Integer(0);
+   final Integer HAS_CONTENT = 0;
 
    public void characters (char ch[], int startpos, int length) {
      state = STATE_CHARS;

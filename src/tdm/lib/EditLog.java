@@ -188,7 +188,7 @@ public class EditLog {
 
   /** Mark a checkpoint in the edit log. */
   public void checkPoint() {
-    checkPoints.push(new  Integer( edits.size() ) );
+    checkPoints.push( edits.size() );
   }
 
   /** Remove all edits added after the last checkpoint. */

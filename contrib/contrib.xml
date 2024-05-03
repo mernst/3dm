@@ -67,8 +67,9 @@ checking its hash, and then unpacking to ${src}
           sha="9000468778bc51f358f5487b2e0c3db0f47af169" />
 
     <wget id="junit"
-       href1="http://central.maven.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar"
+          href1="https://repo1.maven.org/maven2/junit/junit/3.8.2/junit-3.8.2.jar"
           target="${lib}/junit.jar"
+          sha="07e4cde26b53a9a0e3fe5b00d1dbbc7cc1d46060"
           />
        
     <!--xercesImpl.jar, xmlParserAPIs.jar-->
