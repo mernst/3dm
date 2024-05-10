@@ -5,3 +5,4 @@ contrib/
 conflict.log
 classes/
 usecases/review/*.xml
+.idea/

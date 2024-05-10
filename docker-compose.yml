@@ -1,0 +1,8 @@
+services:
+  3dm:
+    build:
+      context: .
+    volumes:
+      - ./:/home/3dm
+    tty: true
+    stdin_open: true
