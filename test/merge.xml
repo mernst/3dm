@@ -17,14 +17,14 @@
 </JCArrayTypeTree>
 </JCVariableDecl>
 <JCBlock isStatic="false">
-<JCVariableDecl label="day">
+<JCVariableDecl label="weekday">
 <JCModifiers />
 <JCPrimitiveTypeTree label="INT" />
 <JCLiteral label="4" />
 </JCVariableDecl>
 <JCSwitch>
 <JCParens>
-<JCIdent label="day" />
+<JCIdent label="weekday" />
 </JCParens>
 <JCCase>
 <JCLiteral label="10" />
@@ -119,7 +119,7 @@
 <JCBlock isStatic="false">
 <JCExpressionStatement>
 <JCAssign>
-<JCIdent label="day" />
+<JCIdent label="weekday" />
 <JCLiteral label="5" />
 </JCAssign>
 </JCExpressionStatement>
